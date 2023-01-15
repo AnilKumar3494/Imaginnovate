@@ -494,8 +494,6 @@ footer .touch input::placeholder {
     border: 1px solid var(--bg-black-50);
     cursor: pointer;
 
-    margin-right: 1rem;
-
     border-radius: 5px;
     background: var(--bg-black-100);
 
@@ -628,5 +626,24 @@ footer .touch input::placeholder {
   }
   header img {
     width: 200px;
+  }
+}
+
+@media (max-width: 395px) {
+  header {
+    padding: 0.5rem;
+  }
+  header img {
+    width: 150px;
+  }
+  .hero_2 h1 {
+    font-size: 1.5rem;
+  }
+  .services .servies_container img,
+  .services .teams_conatiner img {
+    width: 320px;
+  }
+  .about_us .aboutus_text p {
+    text-align: justify;
   }
 }
