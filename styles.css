@@ -25,6 +25,7 @@ h1.styleh1 {
   color: #000;
   font-weight: 500;
   font-size: 3rem;
+  text-align: center;
 }
 h1.styleh1 span {
   color: rgb(19, 101, 238);
@@ -32,6 +33,7 @@ h1.styleh1 span {
 
 h2.styleh2 {
   font-weight: 600;
+  text-align: center;
   line-height: 1.2;
   color: rgb(123, 143, 166);
   font-size: 2rem;
