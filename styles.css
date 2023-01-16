@@ -103,6 +103,11 @@ header img {
 header nav ul {
   display: flex;
 }
+
+header nav ul li {
+  display: flex;
+}
+
 header nav ul li {
   list-style: none;
   padding: 0.5rem;
@@ -363,9 +368,9 @@ header nav ul li a {
 
 footer {
   display: flex;
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
   flex-wrap: wrap;
-  justify-content: center;
+
   font-size: 1.1rem;
   background-color: #fffe;
   color: #000;
@@ -373,6 +378,7 @@ footer {
 .footer_flex {
   display: flex;
   flex-direction: column;
+
   flex: 0 0 25%;
 }
 footer h2 {
@@ -402,6 +408,9 @@ footer li {
 footer .deliverbetter img {
   width: 100%;
   margin-top: 1rem;
+}
+footer .deliverbetter .footeralt_img {
+  display: none;
 }
 footer .quicklinks i {
   padding-right: 1rem;
@@ -485,10 +494,24 @@ footer .touch input::placeholder {
 }
 
 @media (max-width: 968px) {
-  header nav {
+  header nav ul {
     display: none;
   }
+  header header {
+    position: relative;
+  }
+  header nav .nav_transform {
+    position: absolute;
+    left: 0;
+    bottom: -2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;
+    width: 100vw;
 
+    background: #fff;
+  }
   /* nav_toggler */
   .nav_toggler {
     height: 40px;
@@ -558,6 +581,17 @@ footer .touch input::placeholder {
   header {
     padding: 1rem;
   }
+  header nav .nav_transform {
+    position: absolute;
+    left: 0;
+    bottom: -2.5rem;
+
+    padding: 0 1rem;
+  }
+  header nav ul li a {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
   .text_container {
     padding: 0rem;
   }
@@ -589,6 +623,16 @@ footer .touch input::placeholder {
   .about_us p {
     text-align: justify;
   }
+  footer {
+    font-size: 1rem;
+    padding: 2rem;
+  }
+  footer h2 {
+    font-size: 1.3rem;
+  }
+  footer h3 {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 578px) {
@@ -606,17 +650,23 @@ footer .touch input::placeholder {
   }
   footer {
     gap: 1rem;
+    padding: 1rem;
+    justify-content: space-evenly;
   }
   footer .deliverbetter img {
     display: none;
   }
   .footer_flex {
-    flex: 0 0 100%;
+    flex: 0 0 40%;
     gap: 0rem;
   }
 }
 
 @media (max-width: 485px) {
+  header nav ul li a {
+    font-size: 0.6rem;
+    font-weight: 600;
+  }
   h1.styleh1 {
     font-size: 1.7rem;
   }
@@ -635,6 +685,17 @@ footer .touch input::placeholder {
   header {
     padding: 0.5rem;
   }
+  header nav .nav_transform {
+    position: absolute;
+    left: 0;
+    bottom: -2.5rem;
+
+    padding: 0 0.5rem;
+  }
+  header nav ul li a {
+    font-size: 0.5rem;
+    font-weight: 600;
+  }
   header img {
     width: 150px;
   }
@@ -645,7 +706,48 @@ footer .touch input::placeholder {
   .services .teams_conatiner img {
     width: 320px;
   }
+  p.stylep {
+    font-size: 1rem;
+    width: 90%;
+  }
+
+  .expectations .expt_items .expt_container {
+    flex: 0 0 90%;
+  }
   .about_us .aboutus_text p {
     text-align: justify;
+  }
+  footer {
+    font-size: 0.7rem;
+    padding: 1rem;
+    justify-content: left;
+  }
+  footer h2 {
+    font-size: 1rem;
+  }
+  footer h3 {
+    font-size: 1rem;
+  }
+  .hero_2,
+  .services,
+  .expectations,
+  .about_us,
+  .organisations,
+  .contact_us {
+    padding: 0.5rem;
+    gap: 2rem;
+  }
+  footer .touch input {
+    margin-top: 1rem;
+    max-width: 100%;
+    height: 2.5rem;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  footer .touch input::placeholder {
+    padding-left: 2px;
+    color: #000;
+    font-size: 0.7rem;
+    font-weight: 500;
   }
 }
